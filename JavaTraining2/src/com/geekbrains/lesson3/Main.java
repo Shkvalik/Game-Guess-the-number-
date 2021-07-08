@@ -58,4 +58,5 @@ implement a save score system(work with file)
  */
 /* Done:
 commit all metod ChooseLevel and Return he in main metod //Я МАТЬ ЕГО ЭТО СДЕЛАЛ!!!!!
+Привет)
  */
