@@ -50,8 +50,12 @@ public class Main {
     }
 }
 /* TODO: 05.07.2021
-commit all metod ChooseLevel and Return he in main metod //Я МАТЬ ЕГО ЭТО СДЕЛАЛ!!!!!
-implement a level system with help cycle FOR
+Comment all metod ChooseLevel and Return he in main metod //Я МАТЬ ЕГО ЭТО СДЕЛАЛ!!!!! by Shkvalik
+!implement a level system with help cycle FOR!
+implement a help system
 implement a score system
 implement a save score system(work with file)
+ */
+/* Done:
+commit all metod ChooseLevel and Return he in main metod //Я МАТЬ ЕГО ЭТО СДЕЛАЛ!!!!!
  */
