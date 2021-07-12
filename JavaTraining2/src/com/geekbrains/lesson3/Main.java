@@ -1,6 +1,8 @@
 package com.geekbrains.lesson3;
 
+import java.io.IOException;
 import java.util.Scanner;
+import java.io.FileWriter;
 
 public class Main {
     private static final Scanner scan = new Scanner(System.in); //Add a scanner
@@ -8,7 +10,6 @@ public class Main {
         System.out.println("Hi! I am game created by the Shkvalik." +
                 "\nLet's play the game! I will guess the number for you and you will have to guess it." +
                 "\nFor the first Say me your name:");//displaying a greeting
-        String name = scan.next();
         double[] d_conditions = {0, 0, 0, 0, 1}; //{final number, max_quantity_attempts, current_quantity_attempts, current_score, scale}
         System.out.println("Good!\nNext you must choose the mode:\n1.Easy\n2.Medium\n3.Hard\n4.Infinity");
         d_conditions = ChooseLevel(d_conditions);
@@ -22,12 +23,19 @@ public class Main {
             }
             System.out.println(d_conditions[3]);
         }
-        System.out.println("Game is finished");
+        System.out.println("Game is finished\nDo you want to save your result?\nyes/no");
+        String answer = scan.next();
+        if(answer.equals("yes")){
+           save_result(d_conditions);
+        }
+        else{
+            System.exit(0);
+        }
     }
 
     private static double[] PlayLevel(int cur_number, int number, double[] d_conditions){
         System.out.println("Nice! Now guess from 0 to " + cur_number + "\nYou have " + d_conditions[1] + " attempt");//Say range of random number and have left attempts
-        System.out.println(number); //DELETE LATER!
+//        System.out.println(number); //DELETE LATER!
         int input_number = -1;
         while (true) { //they say that the loop must work as long as the attempts used are less than the given by the difficulty
             input_number = scan.nextInt();
@@ -70,7 +78,20 @@ public class Main {
         }
         return d_conditions;
     }
+    private static void save_result(double[] d_conditions){
+        System.out.println("Write your name");
+        String name = scan.next();
+        try (FileWriter writer = new FileWriter("Statistics.txt", true)) {
+            writer.write(name + " : " + d_conditions[3] +'\n');
+            writer.flush();
+            System.out.println("Your result successful saved\n" + name + " : " + d_conditions[3]);
+        } catch (IOException ex) {
+
+            System.out.println(ex.getMessage());
+        }
+    }
 }
+
 /* TODO: 05.07.2021
 implement a help system
 implement a save score system(work with file)
