@@ -15,10 +15,10 @@ public class Main {
             d_conditions = PlayLevel(cur_number, number, d_conditions);
             if (d_conditions[1] == 0){
                 System.out.println("You Lose! The hidden number - " + number);
-                System.out.println(d_conditions[2]);
+                System.out.println("Current Score: " + d_conditions[2]);
                 break;
             }
-            System.out.println(d_conditions[2]);
+            System.out.println("Current Score: " + d_conditions[2]);
         }
         System.out.println("Game is finished\nDo you want to save your result?\nyes/no");
         String answer = scan.next();
@@ -32,7 +32,7 @@ public class Main {
 
     private static double[] PlayLevel(int cur_number, int number, double[] d_conditions){
         System.out.println("Nice! Now guess from 0 to " + cur_number + "\nYou have " + d_conditions[1] + " attempt");//Say range of random number and have left attempts
-        System.out.println(number); //DELETE LATER!
+        System.out.println("Right result: " + number); //DELETE LATER!
         int input_number = -1;
         int f = 0;
         while (true) { //they say that the loop must work as long as the attempts used are less than the given by the difficulty
@@ -95,11 +95,12 @@ public class Main {
 
 /* TODO: 05.07.2021
 implement a help system
-implement a save score system(work with file)
  */
 /* Done:
 commit all metod ChooseLevel and Return he in main metod //Я МАТЬ ЕГО ЭТО СДЕЛАЛ!!!!! by Shkvalik
 !implement a level system with help cycle FOR!//АХАХХАХ ТА Я МАТЬ ЕГО БОГ КОДИНГА!!!!by Shkvalik
 implement a score system//Please call me THE FUCKING KING OF THIS FUCKING CODING !!!!!!!!!by Shkvalik
 imlement infinity mode//nothing complicated...all is simple by Shkvalik
+implement a save score system(work with file) by Shkvalik
+
  */
