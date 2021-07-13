@@ -1,3 +1,4 @@
 Shkvalik : 300.0
 lox : 3.0
 Vlad : 3.0
+Vlad : 300.0
