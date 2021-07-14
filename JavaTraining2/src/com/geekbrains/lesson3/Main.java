@@ -91,4 +91,5 @@ public class Main {
             this.levelsCount = levelsCount;
             this.maxAttemptsCount = maxAttemptsCount;
         }
-    }}
+    }
+}
