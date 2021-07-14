@@ -92,15 +92,3 @@ public class Main {
             this.maxAttemptsCount = maxAttemptsCount;
         }
     }}
-
-/* TODO: 05.07.2021
-implement a help system
- */
-/* Done:
-commit all metod ChooseLevel and Return he in main metod //Я МАТЬ ЕГО ЭТО СДЕЛАЛ!!!!! by Shkvalik
-!implement a level system with help cycle FOR!//АХАХХАХ ТА Я МАТЬ ЕГО БОГ КОДИНГА!!!!by Shkvalik
-implement a score system//Please call me THE FUCKING KING OF THIS FUCKING CODING !!!!!!!!!by Shkvalik
-imlement infinity mode//nothing complicated...all is simple by Shkvalik
-implement a save score system(work with file) by Shkvalik
-
- */
